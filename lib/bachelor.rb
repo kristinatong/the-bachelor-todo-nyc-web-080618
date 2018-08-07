@@ -1,3 +1,4 @@
+require "pry"
 def get_first_name_of_season_winner(data, season)
   first_name = ""
   data.each do |x,y|
@@ -56,9 +57,12 @@ def get_average_age_for_season(data, season)
   avg = 0
   data.each do |x,y|
     y.each do |i|
+      binding.pry
       sum += i["age"].to_f
+      binding.pry
       count += 1
     end
   end
+  binding.pry
   (sum/count).round
 end
