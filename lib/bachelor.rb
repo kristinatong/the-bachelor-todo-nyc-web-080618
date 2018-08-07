@@ -57,12 +57,11 @@ def get_average_age_for_season(data, season)
   avg = 0
   data.each do |x,y|
     y.each do |i|
-      binding.pry
       sum += i["age"].to_f
-      binding.pry
       count += 1
     end
   end
   binding.pry
   (sum/count).round
+  binding.pry
 end
